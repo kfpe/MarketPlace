@@ -1,0 +1,172 @@
+<mxfile host="Electron" modified="2026-08-31T19:34:42.394Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.11 Chrome/114.0.5735.289 Electron/25.9.8 Safari/537.36" etag="_UhVjiU2KOuk8XQ-aFIE" version="22.1.11" type="device">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+    <mxGraphModel dx="1274" dy="608" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2339" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Utilisateur" value="Utilisateur (Abstract)" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="740" y="10" width="240" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="Utilisateur_a" value="# id : int&#xa;# nom : string&#xa;# email : string&#xa;# telephone : string&#xa;# motDePasse : string&#xa;# dateInscription : date" style="text;align=left;verticalAlign=top;spacingLeft=5;fontSize=11;" parent="Utilisateur" vertex="1">
+          <mxGeometry y="30" width="240" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="Utilisateur_m" value="+ seConnecter() : bool&#xa;+ seDeconnecter() : void&#xa;+ modifierProfil() : void" style="text;align=left;verticalAlign=top;spacingLeft=5;fontSize=11;" parent="Utilisateur" vertex="1">
+          <mxGeometry y="125" width="240" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="Client" value="Client" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="300" y="10" width="250" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="Client_a" value="- adresseResidence : string&#xa;- latitude : double&#xa;- longitude : double" style="text;align=left;verticalAlign=top;spacingLeft=5;fontSize=11;" parent="Client" vertex="1">
+          <mxGeometry y="30" width="250" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="Client_m" value="+ rechercherProduit(motCle: string)&#xa;+ filtrerParProximite(rayon: double)&#xa;+ ajouterAuPanier(produitId: int)&#xa;+ passerCommande()&#xa;+ noterBoutique(boutiqueId: int)" style="text;align=left;verticalAlign=top;spacingLeft=5;fontSize=11;" parent="Client" vertex="1">
+          <mxGeometry y="85" width="250" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="Vendeur" value="Vendeur" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="740" y="335" width="240" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="Vendeur_a" value="- estAbonne : bool&#xa;- dateFinAbonnement : date" style="text;align=left;verticalAlign=top;spacingLeft=5;fontSize=11;" parent="Vendeur" vertex="1">
+          <mxGeometry y="30" width="240" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="Vendeur_m" value="+ creerBoutique()&#xa;+ souscrireAbonnement()&#xa;+ consulterChiffreAffaires() : double" style="text;align=left;verticalAlign=top;spacingLeft=5;fontSize=11;" parent="Vendeur" vertex="1">
+          <mxGeometry y="75" width="240" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="Admin" value="Administrateur" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="1290" y="25" width="230" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="Admin_a" value="- role : string" style="text;align=left;verticalAlign=top;spacingLeft=5;fontSize=11;" parent="Admin" vertex="1">
+          <mxGeometry y="30" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Admin_m" value="+ validerBoutique(id: int)&#xa;+ suspendreVendeur(id: int)&#xa;+ gererCategories()&#xa;+ consulterKPIsGlobaux()" style="text;align=left;verticalAlign=top;spacingLeft=5;fontSize=11;" parent="Admin" vertex="1">
+          <mxGeometry y="60" width="230" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Boutique" value="Boutique" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="1270" y="295" width="250" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="Boutique_a" value="- id : int&#xa;- nomBoutique : string&#xa;- logo : string&#xa;- description : string&#xa;- quartier : string&#xa;- pointRepere : string&#xa;- latitude : double&#xa;- longitude : double&#xa;- contactWhatsApp : string&#xa;- statut : string&#xa;- estOuvert : bool" style="text;align=left;verticalAlign=top;spacingLeft=5;fontSize=11;" parent="Boutique" vertex="1">
+          <mxGeometry y="30" width="250" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="Boutique_m" value="+ mettreAJourProfil()&#xa;+ calculerDistance(lat, lng) : double" style="text;align=left;verticalAlign=top;spacingLeft=5;fontSize=11;" parent="Boutique" vertex="1">
+          <mxGeometry y="190" width="250" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Stat" value="StatistiqueVendeur" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="1280" y="680" width="230" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="Stat_a" value="- nbVuesBoutique : int&#xa;- nbVuesProduits : int&#xa;- nbClicsWhatsApp : int&#xa;- nbAppels : int&#xa;- totalRecettesApp : double" style="text;align=left;verticalAlign=top;spacingLeft=5;fontSize=11;" parent="Stat" vertex="1">
+          <mxGeometry y="30" width="230" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="Stat_m" value="+ incrementerVue()&#xa;+ incrementerClicWhatsApp()&#xa;+ calculerRecettesTotales() : double" style="text;align=left;verticalAlign=top;spacingLeft=5;fontSize=11;" parent="Stat" vertex="1">
+          <mxGeometry y="115" width="230" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="Produit" value="Produit" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="920" y="715" width="240" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="Produit_a" value="- id : int&#xa;- nom : string&#xa;- description : string&#xa;- prix : double&#xa;- photos : List&lt;string&gt;&#xa;- disponible : bool&#xa;- statutStock : string" style="text;align=left;verticalAlign=top;spacingLeft=5;fontSize=11;" parent="Produit" vertex="1">
+          <mxGeometry y="30" width="240" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="Produit_m" value="+ modifierPrix(nouveauPrix)&#xa;+ changerDisponibilite(etat)" style="text;align=left;verticalAlign=top;spacingLeft=5;fontSize=11;" parent="Produit" vertex="1">
+          <mxGeometry y="140" width="240" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Categorie" value="Categorie" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="940" y="1000" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Categorie_a" value="- id : int&#xa;- nom : string&#xa;- icone : string" style="text;align=left;verticalAlign=top;spacingLeft=5;fontSize=11;" parent="Categorie" vertex="1">
+          <mxGeometry y="30" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Commande" value="Commande" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="10" y="570" width="240" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="Commande_a" value="- id : int&#xa;- codeCommande : string&#xa;- dateCommande : datetime&#xa;- dateLivraisonPrevue : date&#xa;- lieuLivraison : string&#xa;- statut : string&#xa;- montantTotal : double" style="text;align=left;verticalAlign=top;spacingLeft=5;fontSize=11;" parent="Commande" vertex="1">
+          <mxGeometry y="30" width="240" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="Commande_m" value="+ changerStatut(statut)&#xa;+ notifierWhatsApp()" style="text;align=left;verticalAlign=top;spacingLeft=5;fontSize=11;" parent="Commande" vertex="1">
+          <mxGeometry y="140" width="240" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LigneCommande" value="LigneDeCommande" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="410" y="750" width="220" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="LigneCommande_a" value="- quantite : int&#xa;- prixUnitaire : double" style="text;align=left;verticalAlign=top;spacingLeft=5;fontSize=11;" parent="LigneCommande" vertex="1">
+          <mxGeometry y="30" width="220" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="LigneCommande_m" value="+ calculerSousTotal() : double" style="text;align=left;verticalAlign=top;spacingLeft=5;fontSize=11;" parent="LigneCommande" vertex="1">
+          <mxGeometry y="75" width="220" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="Panier" value="Panier" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="10" y="240" width="210" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="Panier_a" value="- id : int&#xa;- montantTotal : double" style="text;align=left;verticalAlign=top;spacingLeft=5;fontSize=11;" parent="Panier" vertex="1">
+          <mxGeometry y="30" width="210" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Panier_m" value="+ ajouterArticle(pId, qte)&#xa;+ supprimerArticle(pId)&#xa;+ viderPanier()" style="text;align=left;verticalAlign=top;spacingLeft=5;fontSize=11;" parent="Panier" vertex="1">
+          <mxGeometry y="70" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Discussion" value="Discussion" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="320" y="420" width="210" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="Discussion_a" value="- id : int&#xa;- dateCreation : datetime" style="text;align=left;verticalAlign=top;spacingLeft=5;fontSize=11;" parent="Discussion" vertex="1">
+          <mxGeometry y="30" width="210" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Discussion_m" value="+ envoyerMessage(texte)" style="text;align=left;verticalAlign=top;spacingLeft=5;fontSize=11;" parent="Discussion" vertex="1">
+          <mxGeometry y="70" width="210" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Message" value="Message" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="750" y="580" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Message_a" value="- id : int&#xa;- contenu : string&#xa;- horodatage : datetime&#xa;- estLu : bool" style="text;align=left;verticalAlign=top;spacingLeft=5;fontSize=11;" parent="Message" vertex="1">
+          <mxGeometry y="30" width="200" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Avis" value="Avis" style="swimlane;fontStyle=1;align=center;startSize=30;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="1730" y="350" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Avis_a" value="- id : int&#xa;- note : int&#xa;- commentaire : string&#xa;- dateAvis : date" style="text;align=left;verticalAlign=top;spacingLeft=5;fontSize=11;" parent="Avis" vertex="1">
+          <mxGeometry y="30" width="200" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_client_user" value="" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=0;strokeWidth=2;fontSize=10;" parent="1" source="Client" target="Utilisateur" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_vendeur_user" value="" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=0;strokeWidth=2;fontSize=10;" parent="1" source="Vendeur" target="Utilisateur" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_admin_user" value="" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=0;strokeWidth=2;fontSize=10;" parent="1" source="Admin" target="Utilisateur" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_vendeur_boutique" value="possède&#xa;1..1" style="edgeStyle=orthogonalEdgeStyle;endArrow=diamondThin;endFill=1;strokeWidth=2;fontSize=10;align=center;" parent="1" source="Boutique" target="Vendeur" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_boutique_stat" value="mesure&#xa;1..1" style="edgeStyle=orthogonalEdgeStyle;endArrow=diamondThin;endFill=1;strokeWidth=2;fontSize=10;align=center;" parent="1" source="Stat" target="Boutique" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_boutique_produit" value="propose&#xa;0..*" style="endArrow=diamondThin;endFill=1;strokeWidth=2;fontSize=10;align=center;" parent="1" source="Produit" target="Boutique" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_produit_categorie" value="appartient à&#xa;1..1" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;strokeWidth=1.5;fontSize=10;align=center;" parent="1" source="Produit" target="Categorie" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_client_commande" value="passe&#xa;0..*" style="endArrow=none;strokeWidth=1.5;fontSize=10;align=center;" parent="1" source="Commande" target="Client" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_commande_ligne" value="contient&#xa;1..*" style="edgeStyle=orthogonalEdgeStyle;endArrow=diamondThin;endFill=1;strokeWidth=2;fontSize=10;align=center;" parent="1" source="LigneCommande" target="Commande" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_ligne_produit" value="fait référence à&#xa;1..1" style="edgeStyle=orthogonalEdgeStyle;endArrow=diamondThin;endFill=0;strokeWidth=1.5;fontSize=10;align=center;" parent="1" source="LigneCommande" target="Produit" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_client_panier" value="détient&#xa;1..1" style="edgeStyle=orthogonalEdgeStyle;endArrow=diamondThin;endFill=1;strokeWidth=2;fontSize=10;align=center;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="Panier" target="Client_m" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_discussion_msg" value="composé de&#xa;1..*" style="endArrow=diamondThin;endFill=1;strokeWidth=2;fontSize=10;align=center;" parent="1" source="Message" target="Discussion" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_client_disc" value="initie&#xa;0..*" style="endArrow=none;strokeWidth=1.5;fontSize=10;align=center;" parent="1" source="Discussion" target="Client" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_vendeur_disc" value="participe à&#xa;0..*" style="endArrow=none;strokeWidth=1.5;fontSize=10;align=center;" parent="1" source="Discussion" target="Vendeur" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_avis_boutique" value="reçoit / dépose&#xa;0..*" style="endArrow=none;strokeWidth=1.5;fontSize=10;align=center;" parent="1" source="Avis" target="Boutique" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
